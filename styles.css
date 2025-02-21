@@ -28,6 +28,44 @@ body {
     align-items: center;
 }
 
+/* Menambahkan overlay untuk efek dim */
+.nav-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.8s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Memastikan konten tetap di atas overlay */
+.nav-title, .content {
+    z-index: 2;
+    position: relative;
+}
+
+/* Efek dim saat salah satu menu di-hover */
+.navbar:hover .nav-section::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar:hover .nav-section:hover::before {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Menyesuaikan opacity title saat dim */
+.navbar:hover .nav-title {
+    opacity: 0.3;
+}
+
+.navbar:hover .nav-section:hover .nav-title {
+    opacity: 0;
+}
+
 @keyframes borderBlink {
     0% {
         border-color: rgba(51, 51, 51, 1); /* #333 */
@@ -104,16 +142,16 @@ body {
     opacity: 0;
     visibility: hidden;
     text-align: left;
-    max-width: 1000px;
+    max-width: 1200px;
     transform: translateY(30px);
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .content h3 {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 0;
@@ -123,7 +161,7 @@ body {
 }
 
 .content p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1.8;
     font-weight: 300;
     opacity: 0;
@@ -134,7 +172,7 @@ body {
 
 /* Efek hover */
 .nav-section:hover {
-    flex: 6;
+    flex: 8;
 }
 
 .nav-section:hover .nav-title {
