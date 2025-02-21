@@ -234,41 +234,192 @@ body {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        height: 100vh;
+        overflow-y: auto;
     }
 
     .nav-section {
-        border-right: none;
-        border-bottom: none;
+        min-height: 80px;
+        border: none;
+    }
+
+    .nav-section:hover {
+        flex: unset;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
     }
 
     .nav-title {
-        writing-mode: horizontal-tb;
-        text-orientation: mixed;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 0.9rem;
-        letter-spacing: 1px;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    /* Content styling untuk mobile */
+    .content {
+        position: static; /* Ubah dari relative ke static */
+        height: 100vh;
+        width: 100%;
+        padding: 4rem 1.5rem;
+        overflow-y: auto; /* Aktifkan scroll */
+        -webkit-overflow-scrolling: touch; /* Untuk iOS smooth scroll */
+    }
+
+    /* Container styling untuk mobile */
+    .threshold-content,
+    .chronicles-content,
+    .legacy-content,
+    .eclipse-content {
+        height: auto;
+        min-height: calc(100vh - 8rem); /* Tinggi viewport dikurangi padding */
+        margin-bottom: 2rem;
+    }
+
+    /* Pastikan konten dalam container bisa di-scroll */
+    .chronicles-text,
+    .sonic-archives,
+    .upcoming-release {
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Hapus fixed height dari gambar container */
+    .chronicles-image,
+    .project-image,
+    .release-image {
+        margin-bottom: 2rem;
+    }
+
+    /* Tambahkan space di bawah setiap section */
+    .data-fragments,
+    .social-links,
+    .encrypted-note,
+    .track-list {
+        margin-bottom: 2rem;
     }
 
     .content h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Chronicles section */
+    .chronicles-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+        padding-bottom: 6rem;
+    }
+
+    .chronicles-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .data-fragments {
+        width: 100%;
+    }
+
+    .fragment {
+        margin: 0.8rem 0;
+        padding: 0.8rem;
+    }
+
+    /* Social links */
+    .channel {
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+    }
+
+    /* Legacy section */
+    .sonic-project {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .project-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Eclipse section */
+    .upcoming-release {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .release-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .track {
+        padding: 0.8rem;
         margin-bottom: 0.8rem;
     }
 
-    .content p {
-        font-size: 1rem;
+    /* Common elements */
+    .threshold-content,
+    .legacy-content,
+    .eclipse-content {
+        padding: 1rem;
+    }
+
+    .threshold-warning,
+    .legacy-warning,
+    .eclipse-warning {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
+
+    /* Text sizes */
+    .code-label {
+        font-size: 0.7rem;
+    }
+
+    .data-value,
+    .channel-id,
+    .track-status,
+    .sonic-data span,
+    .release-data span {
+        font-size: 0.75rem;
+    }
+
+    p {
+        font-size: 0.9rem;
         line-height: 1.6;
     }
 
-    .content {
-        padding: 2rem;
-        padding-top: 4rem;
+    /* Spacing */
+    .legacy-header,
+    .eclipse-header {
+        margin-bottom: 2rem;
     }
-    
-    .chronicles-content {
-        padding-bottom: 2rem;
+
+    .sonic-archives,
+    .track-list {
+        gap: 1.5rem;
+    }
+
+    /* Legacy content */
+    .legacy-content {
+        padding-bottom: 4rem;
+    }
+
+    /* Eclipse content */
+    .eclipse-content {
+        padding-bottom: 4rem;
+    }
+
+    /* Threshold content */
+    .threshold-content {
+        padding-bottom: 4rem;
     }
 }
 
@@ -307,24 +458,6 @@ body {
     text-align: justify;
     font-style: italic;
     line-height: 1.8;
-}
-
-/* Responsif untuk mobile */
-@media (max-width: 768px) {
-    .chronicles-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .chronicles-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    #about .content p {
-        text-align: center;
-    }
 }
 
 /* Styling untuk identity details */
@@ -383,18 +516,6 @@ body {
     color: #00ff9d;
 }
 
-/* Update mobile styling */
-@media (max-width: 768px) {
-    .identity-fragment {
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-    
-    .chronicles-text {
-        width: 100%;
-    }
-}
-
 /* Styling untuk data fragments */
 .data-fragments {
     margin-bottom: 2rem;
@@ -438,18 +559,6 @@ body {
     font-size: 0.95rem;
     line-height: 1.8;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
-/* Update mobile styling */
-@media (max-width: 768px) {
-    .data-fragments {
-        text-align: left;
-    }
-    
-    .fragment {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
 }
 
 /* Styling untuk Threshold section */
@@ -507,21 +616,6 @@ body {
     opacity: 0.7;
     padding-top: 1rem;
     border-top: 1px solid rgba(0, 255, 157, 0.2);
-}
-
-/* Responsif untuk mobile */
-@media (max-width: 768px) {
-    .threshold-content {
-        padding: 1rem;
-    }
-
-    .threshold-warning {
-        font-size: 0.7rem;
-    }
-
-    .threshold-data {
-        font-size: 0.7rem;
-    }
 }
 
 /* Styling untuk Legacy section */
@@ -646,28 +740,6 @@ body {
     font-size: 0.8rem;
     color: #00ff9d;
     opacity: 0.7;
-}
-
-/* Responsif untuk mobile */
-@media (max-width: 768px) {
-    .sonic-project {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .project-image {
-        width: 200px;
-        height: 200px;
-    }
-
-    .project-details {
-        text-align: center;
-    }
-
-    .sonic-data {
-        align-items: center;
-    }
 }
 
 /* Styling untuk Eclipse section */
@@ -799,36 +871,6 @@ body {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Responsif untuk mobile */
-@media (max-width: 768px) {
-    .upcoming-release {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .release-image {
-        width: 200px;
-        height: 200px;
-    }
-
-    .track {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        gap: 0.5rem;
-    }
-
-    .track-number {
-        width: auto;
-    }
-
-    .track-status {
-        width: 100%;
-        text-align: center;
-    }
-}
-
 /* Styling untuk social links */
 .social-links {
     margin: 2rem 0;
@@ -904,19 +946,102 @@ body {
     opacity: 0.7;
 }
 
+/* Styling untuk hobby list */
+.hobby-list {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0, 255, 157, 0.1);
+}
+
+.hobby-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.hobby-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.hobby-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.hobby-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hobby-detail {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
+    font-style: italic;
+}
+
+.hobby-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-top: 0.3rem;
+}
+
+.metric {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #00ff9d;
+    opacity: 0.7;
+}
+
+.hobby-name {
+    flex: 1;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.hobby-status {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #00ff9d;
+    opacity: 0.7;
+}
+
 /* Responsif untuk mobile */
 @media (max-width: 768px) {
-    .social-links {
-        margin: 1.5rem 0;
+    .hobby-item {
+        padding: 0.6rem;
     }
 
-    .channel {
-        padding: 0.8rem;
+    .hobby-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9rem;
     }
 
-    .channel-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
+    .hobby-name {
+        font-size: 0.8rem;
+    }
+
+    .hobby-status {
+        font-size: 0.7rem;
+    }
+
+    .hobby-detail {
+        font-size: 0.75rem;
+    }
+
+    .metric {
+        font-size: 0.7rem;
     }
 }
