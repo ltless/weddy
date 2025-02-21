@@ -285,7 +285,6 @@ body {
     max-width: 800px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 /* Identity fragment styling */
@@ -301,13 +300,11 @@ body {
 .data-fragments,
 .hobby-list,
 .social-links {
-    margin: 1rem 0;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(0, 255, 157, 0.1);
 }
 
 .social-links {
-    margin: 1rem 0;
     padding: 1rem 0;
     border-top: none;
     border-bottom: none;
@@ -394,7 +391,6 @@ body {
 
 /* Update styling untuk data fragments */
 .data-fragments {
-    margin: 1rem 0;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(0, 255, 157, 0.1);
 }
@@ -771,14 +767,6 @@ body {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Styling untuk social links */
-.social-links {
-    margin: 1rem 0;
-    padding: 1rem 0;
-    border-top: none;
-    border-bottom: none;
-}
-
 .channel-list {
     gap: 0.5rem;
     margin-top: 0.8rem;
@@ -846,7 +834,6 @@ body {
 
 /* Styling untuk hobby list */
 .hobby-list {
-    margin: 1rem 0;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(0, 255, 157, 0.1);
 }
