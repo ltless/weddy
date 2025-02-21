@@ -551,8 +551,8 @@ body {
 
 .project-image {
     flex-shrink: 0;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -671,8 +671,8 @@ body {
 
 .release-image {
     flex-shrink: 0;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -691,14 +691,14 @@ body {
 }
 
 .track-list {
-    margin: 2rem 0;
+    margin: 0;
 }
 
 .track {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.8rem;
     background: rgba(255, 255, 255, 0.02);
     margin-bottom: 0.5rem;
     border-radius: 4px;
@@ -737,7 +737,6 @@ body {
 .release-data {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     font-family: 'Courier New', monospace;
     font-size: 0.8rem;
     color: #00ff9d;
@@ -930,10 +929,35 @@ body {
 
     .project-image {
         width: 100%;
-        height: 250px;
+        height: 200px;
     }
 
     .project-details {
         height: auto;
+    }
+}
+
+/* Update spacing untuk eclipse section */
+.eclipse-content h4 {
+    font-size: 1.4rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    margin-bottom: 2rem;
+}
+
+.eclipse-content .code-label {
+    display: block;
+    color: #00ff9d;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    font-family: var(--font-mono);
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .eclipse-content h4 {
+        margin-bottom: 1.5rem;
     }
 }
