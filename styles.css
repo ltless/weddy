@@ -523,3 +523,400 @@ body {
         font-size: 0.7rem;
     }
 }
+
+/* Styling untuk Legacy section */
+.legacy-content {
+    position: relative;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.legacy-header {
+    margin-bottom: 3rem;
+}
+
+.legacy-label {
+    display: block;
+    font-family: 'Courier New', monospace;
+    color: #00ff9d;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.sonic-archives {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.sonic-project {
+    display: flex;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.sonic-project:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.project-image {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+    transition: all 0.5s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover img {
+    filter: grayscale(0%);
+}
+
+.project-image:hover .project-overlay {
+    transform: translateY(0);
+}
+
+.frequency-text {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #00ff9d;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-details h4 {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.project-details p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+}
+
+.sonic-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #00ff9d;
+    opacity: 0.7;
+}
+
+.legacy-data {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 255, 157, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #00ff9d;
+    opacity: 0.7;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .sonic-project {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .project-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .project-details {
+        text-align: center;
+    }
+
+    .sonic-data {
+        align-items: center;
+    }
+}
+
+/* Styling untuk Eclipse section */
+.eclipse-content {
+    position: relative;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.eclipse-header {
+    margin-bottom: 3rem;
+}
+
+.eclipse-label {
+    display: block;
+    font-family: 'Courier New', monospace;
+    color: #00ff9d;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.eclipse-warning {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    color: #ff3c3c;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.upcoming-release {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.release-image {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.release-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+    transition: all 0.5s ease;
+}
+
+.release-details {
+    flex: 1;
+}
+
+.track-list {
+    margin: 2rem 0;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.track:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.track-number {
+    font-family: 'Courier New', monospace;
+    color: #00ff9d;
+    opacity: 0.7;
+    width: 30px;
+}
+
+.track-name {
+    flex: 1;
+    color: #fff;
+}
+
+.track-duration {
+    font-family: 'Courier New', monospace;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.track-status {
+    font-family: 'Courier New', monospace;
+    color: #00ff9d;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.release-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #00ff9d;
+    opacity: 0.7;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.eclipse-note {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.eclipse-note p {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .upcoming-release {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .release-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .track {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .track-number {
+        width: auto;
+    }
+
+    .track-status {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Styling untuk social links */
+.social-links {
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(0, 255, 157, 0.1);
+    border-bottom: 1px solid rgba(0, 255, 157, 0.1);
+}
+
+.channel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.channel {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.channel:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.channel-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 255, 157, 0.1);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #00ff9d;
+    transition: all 0.3s ease;
+}
+
+.channel:hover .channel-icon {
+    background: rgba(0, 255, 157, 0.2);
+    transform: scale(1.1);
+}
+
+.channel-data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.channel-name {
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.channel-id {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
+}
+
+.channel-status {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #00ff9d;
+    opacity: 0.7;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .social-links {
+        margin: 1.5rem 0;
+    }
+
+    .channel {
+        padding: 0.8rem;
+    }
+
+    .channel-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
