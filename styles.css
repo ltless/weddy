@@ -961,3 +961,110 @@ body {
         margin-bottom: 1.5rem;
     }
 }
+
+/* Update mobile responsive styling */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .nav-section {
+        min-height: 20vh;
+        height: 20vh;
+        width: 100%;
+        flex: none;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .nav-section:hover {
+        min-height: 70vh;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+
+    .navbar:hover .nav-section {
+        min-height: 10vh;
+        height: 10vh;
+    }
+
+    .navbar:hover .nav-section:hover {
+        min-height: 70vh;
+        height: 70vh;
+    }
+
+    .content {
+        padding: 1.5rem;
+        padding-top: 3rem;
+        width: 100%;
+        height: 70vh;
+        overflow-y: auto;
+    }
+
+    .nav-title {
+        font-size: 0.8rem;
+    }
+
+    .chronicles-content {
+        padding: 1rem;
+    }
+
+    .chronicles-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .sonic-project {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .project-details {
+        height: auto;
+    }
+
+    .upcoming-release {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .release-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .track {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .track-status {
+        font-size: 0.75rem;
+    }
+
+    .channel {
+        padding: 0.8rem;
+    }
+
+    .channel-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .channel-name {
+        font-size: 0.9rem;
+    }
+
+    .channel-id {
+        font-size: 0.75rem;
+    }
+}
