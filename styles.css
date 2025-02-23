@@ -98,7 +98,6 @@ body {
     transition-delay: 0.1s;
 }
 
-/* Initial state */
 .content {
     transform: translateY(40px);
 }
@@ -122,6 +121,37 @@ body {
     overflow: hidden;
 }
 
+/* #home {
+    background-image: url("/images/1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+#about {
+    background-image: url("/images/2.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+
+#project {
+    background-image: url("/images/3.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+
+#release {
+    background-image: url("/images/4.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+} */
+
+
 /* Efek hover */
 .nav-section:hover {
     flex: 8;
@@ -129,8 +159,6 @@ body {
 
 /* Aturan untuk title */
 .nav-title {
-    writing-mode: horizontal-tb;
-    text-orientation: mixed;
     color: #fff;
     font-size: 0.9rem;
     font-weight: 400;
@@ -174,8 +202,8 @@ body {
     text-align: left;
     max-width: 1400px;
     transform: translateY(0);
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
     z-index: 3;
     display: flex;
     flex-direction: column;
@@ -218,8 +246,8 @@ body {
 
 /* Efek hover yang lebih menarik */
 .nav-section:hover::before {
-    background: rgba(10, 12, 25, 0.3);
-    backdrop-filter: blur(5px);
+    background: rgba(10, 12, 25, 0.714);
+    backdrop-filter: blur(50px);
 }
 
 /* Styling untuk scrollbar (Webkit browsers) */
@@ -241,10 +269,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem; 
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+.chronicles-content:hover {
+    background: rgba( 10, 12, 25, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .chronicles-image {
@@ -454,6 +493,16 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
+    transition: all, ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.threshold-content:hover {
+    background: rgba( 10, 12, 25, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
 }
 
 .threshold-label {
@@ -517,6 +566,17 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+.legacy-content:hover{
+    background: rgba( 10, 12, 25, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .legacy-header {
@@ -647,6 +707,17 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+.eclipse-content:hover{
+    background: rgba( 10, 12, 25, 0.6 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .eclipse-label {
@@ -710,8 +781,14 @@ body {
 }
 
 .track:hover {
-    background: rgba(255, 255, 255, 0.05);
+    /* background: rgba(255, 255, 255, 0.05); */
     transform: translateX(10px);
+    
+    background: rgba( 10, 12, 25, 0.6 );
+    box-shadow: 0 0 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
 }
 
 .track-number {
@@ -782,8 +859,13 @@ body {
 }
 
 .channel:hover {
-    background: rgba(255, 255, 255, 0.05);
+    /* background: rgba(255, 255, 255, 0.05); */
     transform: translateX(10px);
+    background: rgba( 10, 12, 25, 0.6 );
+    box-shadow: 0 0 8px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
 }
 
 .channel-icon {
@@ -852,8 +934,13 @@ body {
 }
 
 .hobby-item:hover {
-    background: rgba(255, 255, 255, 0.05);
+    /* background: rgba(255, 255, 255, 0.05); */
     transform: translateX(10px);
+    background: rgba( 10, 12, 25, 0.6 );
+    box-shadow: 0 0 8px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
 }
 
 .hobby-info {
