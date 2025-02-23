@@ -273,7 +273,7 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    transition: all;
+
     transition-duration: 0.2s;
 }
 
@@ -493,7 +493,6 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    transition: all, ease-in-out;
     transition-duration: 0.2s;
 }
 
@@ -566,7 +565,6 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    transition: all;
     transition-duration: 0.2s;
 }
 
@@ -707,7 +705,6 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    transition: all;
     transition-duration: 0.2s;
 }
 
